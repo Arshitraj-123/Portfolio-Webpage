@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arshit Raj - Full Stack Developer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .hero-section {
+            background: var(--primary-gradient);
+            min-height: 100vh;
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .skill-badge {
+            background: var(--secondary-gradient);
+            color: white;
+            border: none;
+        }
+        
+        .navbar-custom {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .section-divider {
+            height: 2px;
+            background: var(--primary-gradient);
+            width: 60px;
+            margin: 0 auto 3rem;
+        }
+        
+        .floating-element {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1050;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar with custom styling and z-index -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top shadow-sm" style="z-index: 1030;">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="fas fa-code text-primary me-2"></i>Arshit Raj
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Container and Grid System -->
+    <section id="home" class="hero-section d-flex align-items-center">
+        <div class="container-fluid">
+            <div class="row min-vh-100 align-items-center">
+                <!-- Left Column - Responsive breakpoints -->
+                <div class="col-lg-8 col-md-12 order-2 order-lg-1">
+                    <div class="text-white ps-lg-5">
+                        <h1 class="display-2 fw-bold mb-4">
+                            Hi, I'm <span class="text-warning">Arshit</span>
+                        </h1>
+                        <p class="lead fs-3 mb-4">Full Stack Developer & UI/UX Designer</p>
+                        <p class="fs-5 mb-5 opacity-75">
+                            I create amazing digital experiences that help businesses grow and users smile.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#projects" class="btn btn-warning btn-lg px-4 py-2">
+                                <i class="fas fa-rocket me-2"></i>View My Work
+                            </a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg px-4 py-2">
+                                <i class="fas fa-envelope me-2"></i>Get In Touch
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Profile Image -->
+                <div class="col-lg-4 col-md-12 order-1 order-lg-2 text-center mb-5 mb-lg-0">
+                    <div class="position-relative">
+                        <img src="image/me.jpg" 
+                             alt="Arshit Raj" class="img-fluid rounded-circle shadow-lg" style="width: 300px; height: 300px; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - Container and Gutters -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">About Me</h2>
+                    <div class="section-divider"></div>
+                    <p class="lead text-muted">
+                        Passionate developer and creating innovative solutions
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Grid with Gutters -->
+            <div class="row g-4 mb-5">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm card-hover">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-laptop-code text-primary fs-1 mb-3"></i>
+                            <h5 class="card-title fw-bold">Frontend</h5>
+                            <p class="card-text text-muted">React, Vue, Angular, Bootstrap, Tailwind CSS</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm card-hover">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-server text-success fs-1 mb-3"></i>
+                            <h5 class="card-title fw-bold">Backend</h5>
+                            <p class="card-text text-muted">Node.js, Python, PHP, MySQL, MongoDB</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm card-hover">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-mobile-alt text-info fs-1 mb-3"></i>
+                            <h5 class="card-title fw-bold">Mobile</h5>
+                            <p class="card-text text-muted">React Native, Flutter, Ionic</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm card-hover">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-palette text-danger fs-1 mb-3"></i>
+                            <h5 class="card-title fw-bold">Design</h5>
+                            <p class="card-text text-muted">Figma, Adobe XD, Photoshop, Illustrator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section with Utilities -->
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-center mb-4 fw-bold">Technical Skills</h3>
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <span class="badge skill-badge fs-6 px-3 py-2 rounded-pill">JavaScript</span>
+                        <span class="badge skill-badge fs-6 px-3 py-2 rounded-pill">TypeScript</span>
+                        <span class="badge skill-badge fs-6 px-3 py-2 rounded-pill">React</span>
+                        <span class="badge skill-badge fs-6 px-3 py-2 rounded-pill">Vue.js</span>
+                        <span class="badge skill-badge fs-6 px-3 py-2 rounded-pill">Node.js</span>
+                        <span class="badge skill-badge fs-6 px-3 py-2 rounded-pill">Python</span>
+                        <span class="badge skill-badge fs-6 px-3 py-2 rounded-pill">Docker</span>
+                        <span class="badge skill-badge fs-6 px-3 py-2 rounded-pill">AWS</span>
+                        <span class="badge skill-badge fs-6 px-3 py-2 rounded-pill">MongoDB</span>
+                        <span class="badge skill-badge fs-6 px-3 py-2 rounded-pill">MySQL</span>
+                        <span class="badge skill-badge fs-6 px-3 py-2 rounded-pill">Git</span>
+                        <span class="badge skill-badge fs-6 px-3 py-2 rounded-pill">Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section - Advanced Grid and Breakpoints -->
+    <section id="projects" class="py-5">
+        <div class="container-xxl">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Featured Projects</h2>
+                    <div class="section-divider"></div>
+                    <p class="lead text-muted">
+                        Here are some of my recent projects that showcase my skills
+                    </p>
+                </div>
+            </div>
+
+            <!-- Project Grid with Complex Breakpoints -->
+            <div class="row g-4">
+                <!-- Project 1 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow card-hover">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop" 
+                             class="card-img-top" alt="E-commerce Platform">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">E-commerce Platform</h5>
+                            <p class="card-text text-muted flex-grow-1">
+                                A full-stack e-commerce solution with React frontend and Node.js backend.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <div>
+                                    <span class="badge bg-primary me-1">React</span>
+                                    <span class="badge bg-success me-1">Node.js</span>
+                                    <span class="badge bg-info">MongoDB</span>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-external-link-alt me-1"></i>View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow card-hover">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop" 
+                             class="card-img-top" alt="Analytics Dashboard">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Analytics Dashboard</h5>
+                            <p class="card-text text-muted flex-grow-1">
+                                Real-time analytics dashboard with interactive charts and data visualization.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <div>
+                                    <span class="badge bg-warning me-1">Vue.js</span>
+                                    <span class="badge bg-danger me-1">Python</span>
+                                    <span class="badge bg-dark">D3.js</span>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-external-link-alt me-1"></i>View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow card-hover">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=250&fit=crop" 
+                             class="card-img-top" alt="Mobile App">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Mobile Banking App</h5>
+                            <p class="card-text text-muted flex-grow-1">
+                                Secure mobile banking application with biometric authentication.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <div>
+                                    <span class="badge bg-info me-1">React Native</span>
+                                    <span class="badge bg-secondary me-1">Firebase</span>
+                                    <span class="badge bg-success">Node.js</span>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-external-link-alt me-1"></i>View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow card-hover">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop" 
+                             class="card-img-top" alt="AI Platform">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">AI Analytics Platform</h5>
+                            <p class="card-text text-muted flex-grow-1">
+                                Enterprise-level analytics platform leveraging machine learning for predictive insights.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <div class="mb-2">
+                                    <span class="badge bg-primary me-1">React</span>
+                                    <span class="badge bg-warning me-1">Python</span>
+                                    <span class="badge bg-info me-1">TensorFlow</span>
+                                    <span class="badge bg-danger">AWS</span>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-external-link-alt me-1"></i>View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow card-hover">
+                        <img src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=400&h=250&fit=crop" 
+                             class="card-img-top" alt="Social Media App">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Social Media App</h5>
+                            <p class="card-text text-muted flex-grow-1">
+                                Instagram-like social media platform with real-time messaging and photo sharing.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <div class="mb-2">
+                                    <span class="badge bg-primary me-1">React</span>
+                                    <span class="badge bg-success me-1">Socket.io</span>
+                                    <span class="badge bg-info">PostgreSQL</span>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-external-link-alt me-1"></i>View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 - Added to make it even (6 projects = 2 rows of 3) -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow card-hover">
+                        <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=400&h=250&fit=crop" 
+                             class="card-img-top" alt="Task Management App">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Task Management App</h5>
+                            <p class="card-text text-muted flex-grow-1">
+                                Collaborative project management tool with real-time updates and team collaboration features.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center mt-auto">
+                                <div class="mb-2">
+                                    <span class="badge bg-info me-1">Angular</span>
+                                    <span class="badge bg-success me-1">Express</span>
+                                    <span class="badge bg-primary">PostgreSQL</span>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="fas fa-external-link-alt me-1"></i>View
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section - Container Fluid and Utilities -->
+    <section id="contact" class="py-5 bg-dark text-white">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5">
+                    <h2 class="display-5 fw-bold mb-3">Let's Work Together</h2>
+                    <div class="section-divider bg-light"></div>
+                    <p class="lead opacity-75">
+                        Ready to start your next project? Let's discuss how I can help bring your ideas to life.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-5">
+                <!-- Contact Info -->
+                <div class="col-lg-6">
+                    <div class="ps-lg-5">
+                        <h3 class="mb-4 fw-bold">Get In Touch</h3>
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-envelope text-primary fs-4 me-3 mt-1"></i>
+                            <div>
+                                <h6 class="mb-1 fw-bold">Email</h6>
+                                <p class="text-light opacity-75">arshit@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-phone text-primary fs-4 me-3 mt-1"></i>
+                            <div>
+                                <h6 class="mb-1 fw-bold">Phone</h6>
+                                <p class="text-light opacity-75">+92 4567 3498</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <i class="fas fa-map-marker-alt text-primary fs-4 me-3 mt-1"></i>
+                            <div>
+                                <h6 class="mb-1 fw-bold">Location</h6>
+                                <p class="text-light opacity-75">Bihar,India</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="text-primary fs-4 hover-effect">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-primary fs-4 hover-effect">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="text-primary fs-4 hover-effect">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-6">
+                    <div class="pe-lg-5">
+                        <form class="bg-light p-4 p-lg-5 rounded-3">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control form-control-lg" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control form-control-lg" placeholder="Your Email" required>
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control form-control-lg" placeholder="Subject" required>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                                        <i class="fas fa-paper-plane me-2"></i>Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 border-top border-secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="mb-0 opacity-75">
+                        &copy; 2025 Arshit Raj. Built with Bootstrap 5 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Back to Top Button - High Z-index -->
+    <div class="floating-element">
+        <button class="btn btn-primary btn-lg rounded-circle shadow-lg" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom animations -->
+    <style>
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .hover-effect {
+            transition: transform 0.2s ease;
+        }
+        
+        .hover-effect:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</body>
+</html>
